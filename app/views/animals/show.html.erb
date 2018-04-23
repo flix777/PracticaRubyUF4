@@ -12,7 +12,7 @@
 
 <p>
   <strong>Zona:</strong>
-  <%= @animal.zona %>
+  <%= @animal.zona.nom %>
 </p>
 
 <p>
@@ -22,7 +22,7 @@
 
 <p>
   <strong>Cuidador:</strong>
-  <%= @animal.cuidador %>
+  <%= @animal.cuidador.email %>
 </p>
 
 <%= link_to 'Edit', edit_animal_path(@animal) %> |

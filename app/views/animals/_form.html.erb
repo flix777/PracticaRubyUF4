@@ -22,19 +22,21 @@
   </div>
 
   <div class="field">
-    <%= form.label :zona_id %>
-    <%= form.text_field :zona_id, id: :animal_zona_id %>
-  </div>
-
-  <div class="field">
     <%= form.label :any_naixement %>
     <%= form.number_field :any_naixement, id: :animal_any_naixement %>
   </div>
 
   <div class="field">
-    <%= form.label :cuidador_id %>
-    <%= form.text_field :cuidador_id, id: :animal_cuidador_id %>
-  </div>
+  <%= form.label :cuidador_id %>
+<%= form.select :cuidador_id, @cuidadors.collect { |cuidador| [cuidador.email, cuidador.id]} %>
+</div>
+
+  <div class="field">
+  <%= form.label :zona_id %>
+<%= form.select :zona_id, @zonas.collect { |zona| [zona.nom, zona.id]} %>
+</div>
+
+
 
   <div class="actions">
     <%= form.submit %>
