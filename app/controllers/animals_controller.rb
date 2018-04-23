@@ -5,6 +5,7 @@ class AnimalsController < ApplicationController
   # GET /animals.json
   def index
     @animals = Animal.all
+    # @my_input = params['my_input']
   end
 
   # GET /animals/1

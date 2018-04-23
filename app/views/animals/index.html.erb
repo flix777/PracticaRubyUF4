@@ -1,8 +1,12 @@
 <div class="container">
   <div class="well">
-    <%= link_to "New Animal", new_animal_path, remote: true, class: "btn btn-primary" %>
+    <%= link_to "New Animal", new_animal_path, class: "btn btn-primary" %>
   </div>
   <div class="new-animal"></div>
+
+  <p>Buscador Animals</p>
+ <%= text_field_tag :my_input %>
+  <a class="btn btn-primary">Buscar</a>
 
   <table class="table table-bordered table-striped">
     <thead>
