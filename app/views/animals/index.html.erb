@@ -5,8 +5,11 @@
   <div class="new-animal"></div>
 
   <p>Buscador Animals</p>
- <%= text_field_tag :my_input %>
-  <a class="btn btn-primary">Buscar</a>
+  <%= form_tag(animals_path, method: :get, remote: true) do %>
+    <%= text_field_tag :term, params[:term] %>
+    <%= submit_tag 'Search', name: nil %>
+  <% end %>
+
 
   <table class="table table-bordered table-striped">
     <thead>
@@ -21,6 +24,8 @@
       </tr>
     </thead>
     <tbody class="animal-index">
+    <p id="valueFiltre"></p>
+
       <%= render "index" %>
     </tbody>
   </table>

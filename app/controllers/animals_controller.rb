@@ -4,8 +4,13 @@ class AnimalsController < ApplicationController
   # GET /animals
   # GET /animals.json
   def index
-    @animals = Animal.all
+    @animals = Animal.search(params[:term])
+    #  @tasks = Task.search(params[:term])
     # @my_input = params['my_input']
+  end
+
+  def buscador
+    @animals = Animal.all
   end
 
   # GET /animals/1
