@@ -30,10 +30,15 @@
         <a class="navbar-brand" href="#">M07Uf4Practica</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Link1", "/path1"  %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
-          </ul>
+            <li><%= link_to "Animals", "/animals"  %></li>
+            <li><%= link_to "Zonas", "/zonas"  %></li>
+      <% if user_signed_in? %>
+         <%= current_user.email %>.
+              <li class=""><%= link_to 'Sign out', destroy_user_session_path  %></li>
+      <% else %>
+            <li><%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %></li>
+      <% end %>
+            </ul>
         </div>
       </div>
     </div>
