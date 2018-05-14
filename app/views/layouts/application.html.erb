@@ -34,9 +34,10 @@
             <li><%= link_to "Zonas", "/zonas"  %></li>
       <% if user_signed_in? %>
          <%= current_user.email %>.
-              <li class=""><%= link_to 'Sign out', destroy_user_session_path  %></li>
+              <li class=""><%= link_to 'Sign out', destroy_user_session_path,  :method => :delete %></li>
       <% else %>
-            <li><%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %></li>
+            <li><%= link_to 'Register', new_user_registration_path %> </li>
+            <li><%= link_to 'Sign in', new_user_session_path %></li>
       <% end %>
             </ul>
         </div>

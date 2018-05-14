@@ -14,6 +14,8 @@ class ZonasControllerTest < ActionDispatch::IntegrationTest
     get new_zona_url
     assert_response :success
   end
+
+
 =begin
   test "should create zona" do
     #assert_difference('Zona.count'),1 do
